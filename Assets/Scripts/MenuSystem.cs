@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuSystem : MonoBehaviour
 {
+    public string chosenLevel;
+    [SerializeField] Image levelImage;
+    [SerializeField] Sprite baseLevelImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +28,30 @@ public class MenuSystem : MonoBehaviour
     }
 
 
-    public void Quit()
+    public void QuitGame()
     {
         FindObjectOfType<GameManager>().QuitGame();
     }
 
+    public void SelectLevel(string level)
+    {
+        chosenLevel = level;
+    }
+
+    public void SelectImage(Sprite image)
+    {
+        if (image != null)
+        {
+            levelImage.sprite = image;
+        }
+        else
+        {
+            levelImage.sprite = baseLevelImage;
+        }
+    }
 
 
+    
 
 
 
