@@ -30,8 +30,10 @@ public class BallPhysics : MonoBehaviour
 
                 Debug.DrawRay(rb.position, planeProj * ballSpeed);
 
-                rb.AddForce(planeProj.normalized * ballSpeed, ForceMode.Acceleration);
+                rb.AddForce(planeProj * ballSpeed, ForceMode.Acceleration);
             }
         }
+
+        //rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10.0f);
     }
 }
