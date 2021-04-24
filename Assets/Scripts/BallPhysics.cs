@@ -30,7 +30,7 @@ public class BallPhysics : MonoBehaviour
 
                 Debug.DrawRay(rb.position, planeProj * ballSpeed);
 
-                rb.AddForce(planeProj * ballSpeed, ForceMode.Acceleration);
+                rb.AddForce(planeProj * ballSpeed * Time.fixedDeltaTime, ForceMode.Acceleration);
             }
         }
 
