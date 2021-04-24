@@ -19,7 +19,7 @@ public class MapRotation : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 desiredRotation = new Vector3(horizontalInput, 0, verticalInput)* tiltRotation;
+        Vector3 desiredRotation = new Vector3(-verticalInput, 0, horizontalInput)* tiltRotation;
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(desiredRotation), tiltSpeed); 
     }
 }
