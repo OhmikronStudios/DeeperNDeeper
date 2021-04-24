@@ -121,6 +121,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &292174708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4128892103155331798, guid: e5c9b567baa69c1439a4539a143e7d6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4128892102133135903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &292174709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292174708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a74f53a9e5bdcb44816f6196549b59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltRotation: 15
+  tiltSpeed: 0.4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +323,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2325666488851290616, guid: f589e25060428844cab0e8092e39486b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3540285409635133398, guid: f589e25060428844cab0e8092e39486b,
         type: 3}
       propertyPath: m_Name
