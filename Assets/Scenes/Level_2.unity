@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1054337137}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -674,8 +674,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313914679}
-  m_LocalRotation: {x: 0.260177, y: 0.65750134, z: -0.25873044, w: 0.6580718}
-  m_LocalPosition: {x: -11.74, y: 27.72, z: -19.43}
+  m_LocalRotation: {x: 0.0010233781, y: 0.93025076, z: -0.36692297, w: 0.00040473044}
+  m_LocalPosition: {x: 18.8, y: 27.72, z: 5.3199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
+    m_Style: 3
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -1289,12 +1289,10 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 0}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 1704342009}
-  - {fileID: 1619686111}
+  m_ChildCameras: []
   m_Instructions: []
   m_DefaultBlend:
-    m_Style: 3
+    m_Style: 1
     m_Time: 0.5
     m_CustomCurve:
       serializedVersion: 2
@@ -1314,11 +1312,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1704342010}
-  - {fileID: 1619686112}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &893696757
 Mesh:
@@ -1529,10 +1525,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 0
-  m_FollowOffset: {x: -4, y: 4, z: 0}
-  m_XDamping: 0
+  m_FollowOffset: {x: 0, y: 4, z: 5.25}
+  m_XDamping: 0.2
   m_YDamping: 1
-  m_ZDamping: 0
+  m_ZDamping: 0.2
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -4572,13 +4568,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619686110}
-  m_LocalRotation: {x: 0.27059805, y: 0.65328145, z: -0.27059805, w: 0.65328157}
-  m_LocalPosition: {x: 3, y: 12.38, z: -19.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0000000055029252, y: 0.9474787, z: -0.3198189, w: 0.000000016302678}
+  m_LocalPosition: {x: 7, y: 12.38, z: -14.25}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 895761972}
-  m_Father: {fileID: 825316695}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 30.000002, y: 90.00001, z: 0}
 --- !u!1 &1686386187
 GameObject:
@@ -4950,14 +4946,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704342008}
-  m_LocalRotation: {x: 0.260177, y: 0.65750134, z: -0.25873044, w: 0.6580718}
-  m_LocalPosition: {x: -11.74, y: 27.72, z: -19.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0010233781, y: 0.93025076, z: -0.36692297, w: 0.00040473044}
+  m_LocalPosition: {x: 18.8, y: 27.72, z: 5.3199997}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000002}
   m_Children:
   - {fileID: 2085183199}
-  m_Father: {fileID: 825316695}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 43.052002, y: 90.00001, z: 0.126}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 43.052002, y: 180.00002, z: 0.126}
 --- !u!43 &1768884735
 Mesh:
   m_ObjectHideFlags: 0
@@ -6764,6 +6760,7 @@ GameObject:
   - component: {fileID: 2059920970}
   - component: {fileID: 2059920969}
   - component: {fileID: 2059920973}
+  - component: {fileID: 2059920974}
   m_Layer: 0
   m_Name: PlayerBall
   m_TagString: Untagged
@@ -6861,6 +6858,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &2059920974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059920968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811d07704ee73034ea84455ab9a90d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSpeed: 2
 --- !u!43 &2073637229
 Mesh:
   m_ObjectHideFlags: 0
@@ -7069,7 +7079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -31.74, y: 26.72, z: 0.5699997}
+  m_FollowOffset: {x: -1.2000008, y: 26.72, z: 25.32}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
