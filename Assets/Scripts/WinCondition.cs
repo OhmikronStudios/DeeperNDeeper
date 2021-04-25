@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
@@ -19,7 +18,13 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private GameObject ball;
 
     private System.Func<bool>[] starConditions;
+    [SerializeField] private Image[] starImages;
+
+
+
     [SerializeField] private float timeTillStarShowsUp = 0.2f;
+
+    [SerializeField] string nextLevelScene = "Level_01";
 
     private void Start()
     {
@@ -52,6 +57,11 @@ public class WinCondition : MonoBehaviour
             {
                 // Highlight Star
                 yield return new WaitForSeconds(timeTillStarShowsUp);
+            }
+
+            else 
+            {
+                // Show Dark Star
             }
         }
     }
