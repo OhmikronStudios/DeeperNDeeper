@@ -9,12 +9,26 @@ public class WinCondition : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera winCam;
 
     [SerializeField] private float timeToBeat = 10.0f;
+    private float timeElapsed;
+
     [SerializeField] GameObject GameWinUI;
 
-    private float timeElapsed;
+
     private bool hasPlayerDied = false;
 
     [SerializeField] private GameObject ball;
+
+    private System.Func<bool>[] starConditions;
+    [SerializeField] private float timeTillStarShowsUp = 0.2f;
+
+    private void Start()
+    {
+        starConditions = new System.Func<bool>[3];
+
+        starConditions[0] = () => true;
+        starConditions[1] = () => timeElapsed <= timeToBeat;
+        starConditions[2] = () => hasPlayerDied;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,8 +41,18 @@ public class WinCondition : MonoBehaviour
 
     private void WinCutscene()
     {
-        Sequence sequence = DOTween.Sequence();
+        
+    }
 
-        sequence.Append(ball.transform.DOMove(transform.position, 0.3f));
+    private IEnumerator DisplayStars()
+    {
+        foreach (var condition in starConditions) 
+        {
+            if (condition() == true)
+            {
+                // Highlight Star
+                yield return new WaitForSeconds(timeTillStarShowsUp);
+            }
+        }
     }
 }
