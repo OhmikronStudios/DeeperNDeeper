@@ -23,7 +23,7 @@ public class CollisionInfo : MonoBehaviour
 
         foreach (CollisionData data in ImpactSounds)
         {
-            if (data.mat = null) continue;
+            if (data.mat == null) continue;
 
             CollisionMap.Add(data.mat, data);
         }
