@@ -8,20 +8,21 @@ public class BouncePad : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            Debug.Log("Bounce pad is colliding with player");
+            Vector3 knockBack = collision.GetContact(0).normal * knockBackForce;
+            Debug.DrawLine(transform.position, transform.position + knockBack);
+
+
+            rb.AddForce(knockBack, ForceMode.Impulse);
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
-            
-            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-
-            if (rb != null)
-            {
-                Debug.Log("Bounce pad is colliding with player");
-                Vector3 knockBack = collision.GetContact(0).normal * knockBackForce;
-                Debug.DrawLine(transform.position, transform.position + knockBack);
-
-
-                rb.AddForce(knockBack, ForceMode.Impulse);
-            }
+           
         }
     }
 }

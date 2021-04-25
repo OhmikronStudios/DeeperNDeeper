@@ -14,6 +14,9 @@ public class MapRotation : MonoBehaviour
 
     private bool isPlayerCam = false;
 
+    [SerializeField] Transform spawnPos;
+    [SerializeField] GameObject playerBall;
+
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
@@ -39,6 +42,11 @@ public class MapRotation : MonoBehaviour
 
         playerCam.Priority = isPlayerCam ? 11 : 10;
         mapCam.Priority = isPlayerCam ? 10 : 11;
+    }
+
+    public void RespawnPlayer()
+    {
+        playerBall.transform.position = spawnPos.position;
     }
 
 }
