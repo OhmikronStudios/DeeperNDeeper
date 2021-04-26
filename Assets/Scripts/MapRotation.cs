@@ -33,6 +33,8 @@ public class MapRotation : MonoBehaviour
 
             Vector3 desiredRotation = new Vector3(-verticalInput, 0, horizontalInput) * tiltRotation;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(desiredRotation), tiltSpeed);
+
+            //transform.RotateAround(Vector3.zero, desiredRotation, 1);
         }
     }
 
