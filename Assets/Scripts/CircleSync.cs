@@ -17,9 +17,9 @@ public class CircleSync : MonoBehaviour
         var dir = Camera.transform.position - transform.position;
         var ray = new Ray(transform.position, dir.normalized);
 
-        if (Physics.Raycast(ray, 3000, Mask))
+        if (Physics.Raycast(ray, 4000, Mask))
         {
-            WallMaterial.SetFloat(SizeID, 1);
+            WallMaterial.SetFloat(SizeID, 0.5f);
         }
         else
             WallMaterial.SetFloat(SizeID, 0);
