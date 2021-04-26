@@ -10,6 +10,9 @@ public class BouncePad : MonoBehaviour
     [SerializeField] float scaleDuration = 0.4f;
 
     [SerializeField] float coolDownDuration = 1f;
+
+    [SerializeField] ParticleSystem rippleFX;
+
     private bool canKnock = true;
 
     private AudioCue audioPlayer;
@@ -35,6 +38,8 @@ public class BouncePad : MonoBehaviour
             Transform child = transform.GetChild(0);
             if (child != null)
             child.DOPunchScale(child.localScale * scaleModifier, scaleDuration, 4, 1).SetEase(Ease.OutElastic);
+
+            rippleFX.Play();
 
             rb.AddForce(knockBack, ForceMode.Impulse);
             canKnock = false;
