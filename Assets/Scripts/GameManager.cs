@@ -28,7 +28,11 @@ public class GameManager : MonoBehaviour
     public void PlayLevel()
     {
         menuSystem = FindObjectOfType<MenuSystem>();
-        SceneManager.LoadScene(menuSystem.chosenLevel);
+        if (menuSystem.chosenLevel != "")
+        {
+            SceneManager.LoadScene(menuSystem.chosenLevel);
+        }
+        else { }
     }
 
 }
