@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2691165962213101605
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Outline
-  m_Shader: {fileID: -6465566751694194690, guid: 183612153d69d4b4baf9ca8ac01810e6,
+  m_Name: M_Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: 83bf11acda04a2348a4fe3023525fb47,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -49,6 +62,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - FillAmount: 0.179
+    - Vector1_48C6DAB3: 3
+    - Vector1_9545A6A7: -0.16
+    - Vector1_E52F3352: 0.62
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -61,7 +78,6 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineThickness: -0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -69,23 +85,15 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _WobbleX: -0.269
+    - _WobbleZ: 0.314
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_285FF59: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 0.70980394}
+    - Color_7517D7A3: {r: 0, g: 0.32967275, b: 0.5943396, a: 1}
+    - Color_ADB6D00F: {r: 0.27020293, g: 0.6029884, b: 0.8679245, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &5457441169775565046
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
