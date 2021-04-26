@@ -4890,7 +4890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f4dcd5da0291c4b914bd20a115beb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioCue: {fileID: 0}
+  _audioCue: {fileID: 11400000, guid: 4e89fb1e76b43de43b441b34eefac38c, type: 2}
   _playOnStart: 0
   _audioCueEventChannel: {fileID: 11400000, guid: e954a0dd3c3edd448ba1d99d6d0896af,
     type: 2}
