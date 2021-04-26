@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2394525722315815917}
   - component: {fileID: 2394525722315815913}
   - component: {fileID: 2394525722315815914}
+  - component: {fileID: 4003121080773706207}
+  - component: {fileID: 6966664545569505091}
   m_Layer: 0
   m_Name: P_PlayerBall 1
   m_TagString: Player
@@ -125,3 +127,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballSpeed: 12
+--- !u!114 &4003121080773706207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394525722315815916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f4dcd5da0291c4b914bd20a115beb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 0}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: e954a0dd3c3edd448ba1d99d6d0896af,
+    type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 7db604caae227634eac04bf18c584724,
+    type: 2}
+--- !u!114 &6966664545569505091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394525722315815916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eeb3317bef11224fbebca6ecdfdb886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpactSounds:
+  - mat: {fileID: 2100000, guid: c852af001dae0064e9acaa832f1dadb7, type: 2}
+    audioCueSO: {fileID: 11400000, guid: c31a3004b0fa94e42aed579fb331f9b0, type: 2}
