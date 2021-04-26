@@ -2421,6 +2421,12 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &228460256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2394525722315815916, guid: 7704b0bb24e28b54585e3f5fe0bea1f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886586575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &228460257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2394525722315815912, guid: 7704b0bb24e28b54585e3f5fe0bea1f9,
@@ -10804,8 +10810,8 @@ MonoBehaviour:
   tiltPlayerSpeed: 0.2
   playerCam: {fileID: 761464124}
   mapCam: {fileID: 1460360524}
-  spawnPos: {fileID: 0}
-  playerBall: {fileID: 0}
+  spawnPos: {fileID: 32693414}
+  playerBall: {fileID: 228460256}
 --- !u!43 &2048947126
 Mesh:
   m_ObjectHideFlags: 0
