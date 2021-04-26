@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5630607275669779084}
   - component: {fileID: 5630607275669779085}
   - component: {fileID: 2926589016149476533}
+  - component: {fileID: 1381523990}
   m_Layer: 0
   m_Name: P_BouncePad
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5630607275669779083}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.25, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockBackForce: 45
+  scaleModifier: 0.4
+  scaleDuration: 0.4
+  coolDownDuration: 1
 --- !u!135 &2926589016149476533
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -57,8 +61,26 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.39
-  m_Center: {x: 0.5, y: 1, z: -0.5}
+  m_Radius: 1
+  m_Center: {x: 0.5, y: 0.6, z: -0.5}
+--- !u!114 &1381523990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630607275669779083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f4dcd5da0291c4b914bd20a115beb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 0}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: e954a0dd3c3edd448ba1d99d6d0896af,
+    type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 23de2d9a3999f064db8ac58ef3c009ab,
+    type: 2}
 --- !u!1 &6265152689354784288
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 6265152689354784288}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.5, y: 0, z: -0.5}
-  m_LocalScale: {x: 0.145188, y: 0.145188, z: 0.145187}
+  m_LocalScale: {x: 0.09178931, y: 0.09178931, z: 0.11657072}
   m_Children: []
   m_Father: {fileID: 5630607275669779084}
   m_RootOrder: 0

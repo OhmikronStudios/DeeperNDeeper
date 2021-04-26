@@ -1,13 +1,23 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BouncePad : MonoBehaviour
 {
     [SerializeField] private float knockBackForce = 45;
 
+    [SerializeField] float scaleModifier = 1.2f;
+    [SerializeField] float scaleDuration = 0.4f;
+
+    [SerializeField] float coolDownDuration = 1f;
+    private bool canKnock = true;
+
+    private AudioCue audioPlayer;
+
     private void OnCollisionEnter(Collision collision)
     {
+        if (canKnock == false) return;
+
         Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
 
         if (rb != null)
@@ -16,8 +26,19 @@ public class BouncePad : MonoBehaviour
             Vector3 knockBack = collision.GetContact(0).normal * knockBackForce;
             Debug.DrawLine(transform.position, transform.position + knockBack);
 
+            if (audioPlayer == null)
+                audioPlayer = GetComponent<AudioCue>();
+
+            if (audioPlayer != null)
+                audioPlayer.PlayAudioCue();
+
+            Transform child = transform.GetChild(0);
+            if (child != null)
+            child.DOPunchScale(child.localScale * scaleModifier, scaleDuration, 4, 1).SetEase(Ease.OutElastic);
 
             rb.AddForce(knockBack, ForceMode.Impulse);
+            canKnock = false;
+            StartCoroutine(CoolDown());
         }
 
         if (collision.gameObject.CompareTag("Player"))
@@ -25,4 +46,20 @@ public class BouncePad : MonoBehaviour
            
         }
     }
+
+    private IEnumerator CoolDown()
+    {
+        yield return new WaitForSeconds(coolDownDuration);
+        canKnock = true;
+    }
+
+#if UNITY_EDITOR
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, knockBackForce / 10);
+    }
+
+#endif
 }
