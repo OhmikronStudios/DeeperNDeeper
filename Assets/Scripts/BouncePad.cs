@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using Cinemachine;
 
 public class BouncePad : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class BouncePad : MonoBehaviour
     private bool canKnock = true;
 
     private AudioCue audioPlayer;
+
+    private CinemachineImpulseSource impulse;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -35,6 +38,9 @@ public class BouncePad : MonoBehaviour
             if (audioPlayer != null)
                 audioPlayer.PlayAudioCue();
 
+
+                
+
             Transform child = transform.GetChild(0);
             if (child != null)
             child.DOPunchScale(child.localScale * scaleModifier, scaleDuration, 4, 1).SetEase(Ease.OutElastic);
@@ -48,7 +54,14 @@ public class BouncePad : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-           
+            if (impulse == null)
+                impulse = GetComponent<CinemachineImpulseSource>();
+
+            if (impulse != null)
+            {
+                impulse.GenerateImpulse(knockBackForce / 10);
+                Debug.Log("Generating Impulse");
+            }
         }
     }
 

@@ -2227,7 +2227,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901392475075765608}
-  m_LocalRotation: {x: -0.00000002117994, y: 0.83484113, z: -0.550491, w: -0.00000003212021}
+  m_LocalRotation: {x: 0.000000021179938, y: 0.83484113, z: -0.550491, w: 0.000000032120205}
   m_LocalPosition: {x: 0, y: 6, z: 3}
   m_LocalScale: {x: 1.9016472, y: 1.9016467, z: 1.9016467}
   m_Children:
@@ -3430,6 +3430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901392476417662918}
   - component: {fileID: 901392476417662969}
+  - component: {fileID: 7407544266649079287}
   m_Layer: 0
   m_Name: CM PlayerCam
   m_TagString: Untagged
@@ -3444,8 +3445,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901392476417662968}
-  m_LocalRotation: {x: -0.000000005752966, y: 0.8899415, z: -0.45607468, w: -0.0000000112258}
-  m_LocalPosition: {x: -1.9804136, y: 31.93216, z: 7.211235}
+  m_LocalRotation: {x: 0.000000007848482, y: 0.8899415, z: -0.45607468, w: 0.000000015314795}
+  m_LocalPosition: {x: -1.9804134, y: 31.93216, z: 7.211235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 901392475174458130}
@@ -3487,6 +3488,21 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 901392475174458130}
+--- !u!114 &7407544266649079287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901392476417662968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &901392476439955248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901392476500778204}
   - component: {fileID: 901392476500778207}
+  - component: {fileID: 6782885380412101201}
   m_Layer: 0
   m_Name: CM Map Cam
   m_TagString: Untagged
@@ -3611,8 +3628,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 11
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 901392475651901972}
+  m_Follow: {fileID: 901392475651901972}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -3628,6 +3645,21 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 901392476094772217}
+--- !u!114 &6782885380412101201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901392476500778206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &1180311721988073634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,7 +4240,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7994015473427908955}
-  m_LocalRotation: {x: 0.00005374185, y: 0.99964225, z: -0.026670514, w: 0.0020143078}
+  m_LocalRotation: {x: 0.00005374255, y: 0.99964225, z: -0.026670404, w: 0.0020143425}
   m_LocalPosition: {x: 6.9842243, y: 9.5890255, z: -15.585544}
   m_LocalScale: {x: 1.9016472, y: 1.9016467, z: 1.9016467}
   m_Children:
