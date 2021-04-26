@@ -50,8 +50,12 @@ public class MenuSystem : MonoBehaviour
         }
     }
 
+    public void OpenURL(string URL)
+    {
+        Application.OpenURL(URL);
+        Debug.Log("is this working?");
+    }
 
-    
 
 
 
