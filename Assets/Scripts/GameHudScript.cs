@@ -13,6 +13,11 @@ public class GameHudScript : MonoBehaviour
     [SerializeField] private Transform starsPanel;
     [SerializeField] private Image[] stars;
 
+    private void Start()
+    {
+        stars = starsPanel.GetComponentsInChildren<Image>();
+    }
+
     private void OnEnable()
     {
         starsPanel.DOScale(Vector3.one, 0.5f).From(Vector3.zero);

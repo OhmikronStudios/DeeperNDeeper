@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - FillAmount: 0.179
+    - FillAmount: 0.164
     - Vector1_48C6DAB3: 3
     - Vector1_9545A6A7: -0.16
     - Vector1_E52F3352: 0.62

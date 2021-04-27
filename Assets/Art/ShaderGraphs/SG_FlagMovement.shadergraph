@@ -34,7 +34,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"77a97756-da44-4fc3-b467-001078ee0f31\"\n    },\n    \"m_Name\": \"Number\",\n    \"m_DefaultReferenceName\": \"Vector1_2ABF3CDB\",\n    \"m_OverrideReferenceName\": \"_LevelNumber\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 1.0,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"77a97756-da44-4fc3-b467-001078ee0f31\"\n    },\n    \"m_Name\": \"Number\",\n    \"m_DefaultReferenceName\": \"Vector1_2ABF3CDB\",\n    \"m_OverrideReferenceName\": \"_LevelNumber\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 1.0,\n    \"m_FloatType\": 2,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 1.0\n    }\n}"
         },
         {
             "typeInfo": {
