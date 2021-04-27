@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7651664373882452200}
   - component: {fileID: 7651664373882452215}
   - component: {fileID: 7651664373882452201}
+  - component: {fileID: 7813312164806719564}
   m_Layer: 0
   m_Name: SM_SpikeBall
   m_TagString: Untagged
@@ -125,3 +126,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050c247dbed0471458ad7989b635a798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7813312164806719564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417786910291407827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f4dcd5da0291c4b914bd20a115beb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 11400000, guid: 4f57389f4215b4f4481257c5e1397e9f, type: 2}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: e954a0dd3c3edd448ba1d99d6d0896af,
+    type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 23de2d9a3999f064db8ac58ef3c009ab,
+    type: 2}

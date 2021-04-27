@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3208666664392109582}
   - component: {fileID: 3208666664392109568}
   - component: {fileID: 3208666664392109583}
+  - component: {fileID: 5233132229942711447}
   m_Layer: 0
   m_Name: Wind Influence Collider
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windInfluence: 20
-  audioCue: {fileID: 0}
+  audioCue: {fileID: 5233132229942711447}
   windInfluenceOverDistance:
     serializedVersion: 2
     m_Curve:
@@ -84,6 +85,24 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   MaxDistance: 0
+--- !u!114 &5233132229942711447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208666664392109581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f4dcd5da0291c4b914bd20a115beb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 11400000, guid: c31fd63b03d2baf4d83f6533fbad9c78, type: 2}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: e954a0dd3c3edd448ba1d99d6d0896af,
+    type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 23de2d9a3999f064db8ac58ef3c009ab,
+    type: 2}
 --- !u!1 &3208666664527171513
 GameObject:
   m_ObjectHideFlags: 0
