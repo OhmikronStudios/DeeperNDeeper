@@ -85,7 +85,17 @@ public class WinCondition : MonoBehaviour
     private IEnumerator LoadLevelWithDelay()
     {
         yield return new WaitForSeconds(timeTillLevelLoads);
-        SceneManager.LoadScene(nextLevelScene);
+
+        int index = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (index >= SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        SceneManager.LoadScene(index);
+
+        
     }
 
     private IEnumerator DisplayStars()
