@@ -29,7 +29,10 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private float timeTillLevelLoads = 1.2f;
     [SerializeField] string nextLevelScene = "Level_01";
 
+    [SerializeField] Text timerText;
 
+
+    private bool isLevelCompleted = false;
 
     private void Start()
     {
@@ -39,15 +42,31 @@ public class WinCondition : MonoBehaviour
             GameWinUI.GetComponent<GameHudScript>().NextLevelName = nextLevelScene;
     }
 
+    private void Update()
+    {
+        if (!isLevelCompleted)
+        {
+            timeElapsed += Time.deltaTime;
+            timerText.text = GetTime();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             winCam.Priority = 12;
+            isLevelCompleted = true;
             StartCoroutine(LoadLevelWithDelay());
             GameWinUI.SetActive(true);
             GameWinUI.GetComponent<GameHudScript>().UpdateStars(CheckStars());
         }
+    }
+
+    public string GetTime()
+    {
+        float seconds = Mathf.RoundToInt(timeElapsed % 60);
+        return seconds.ToString();
     }
 
     private int CheckStars()
