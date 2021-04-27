@@ -13,6 +13,8 @@ public class GameHudScript : MonoBehaviour
     [SerializeField] private Transform starsPanel;
     [SerializeField] private Image[] stars;
 
+    [SerializeField] private Sprite highlightStar;
+
     private void Start()
     {
         stars = starsPanel.GetComponentsInChildren<Image>();
@@ -28,6 +30,14 @@ public class GameHudScript : MonoBehaviour
     {
         string scene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(scene);
+    }
+
+    public void UpdateStars(int numberOfStars)
+    {
+        for (int i = 0; i <= numberOfStars; i++)
+        {
+            stars[i].sprite = highlightStar;
+        }
     }
 
     public void OnNextLevelButton()

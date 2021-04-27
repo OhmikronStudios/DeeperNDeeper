@@ -15,7 +15,7 @@ public class WinCondition : MonoBehaviour
     [SerializeField] GameObject GameWinUI;
 
 
-    private bool hasPlayerDied = false;
+    public bool hasPlayerDied = false;
 
     [SerializeField] private GameObject ball;
 
@@ -29,14 +29,11 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private float timeTillLevelLoads = 1.2f;
     [SerializeField] string nextLevelScene = "Level_01";
 
+
+
     private void Start()
     {
         StartCoroutine(DelayedCameraSet());
-        starConditions = new System.Func<bool>[3];
-
-        starConditions[0] = () => true;
-        starConditions[1] = () => timeElapsed <= timeToBeat;
-        starConditions[2] = () => hasPlayerDied;
 
         if (GameWinUI != null)
             GameWinUI.GetComponent<GameHudScript>().NextLevelName = nextLevelScene;
@@ -49,12 +46,21 @@ public class WinCondition : MonoBehaviour
             winCam.Priority = 12;
             StartCoroutine(LoadLevelWithDelay());
             GameWinUI.SetActive(true);
+            GameWinUI.GetComponent<GameHudScript>().UpdateStars(CheckStars());
         }
     }
 
-    private void WinCutscene()
+    private int CheckStars()
     {
-        
+        int stars = 0;
+
+        if (!hasPlayerDied)
+            stars++;
+
+        if (timeElapsed < timeToBeat)
+            stars++;
+
+        return stars;
     }
 
     private IEnumerator LoadLevelWithDelay()

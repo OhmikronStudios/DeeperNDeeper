@@ -48,6 +48,7 @@ public class MapRotation : MonoBehaviour
 
     public void RespawnPlayer()
     {
+        FindObjectOfType<WinCondition>().hasPlayerDied = true;
         playerBall.transform.position = spawnPos.position;
     }
 
